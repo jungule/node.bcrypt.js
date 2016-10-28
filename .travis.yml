@@ -15,8 +15,8 @@ before_install:
 deploy:
 
   provider: releases
-    user: GITHUB USERNAME
-    password: GITHUB PASSWORD
+  api_key:
+    secure: ETIFGMTBctIDFBv6KWlH7PvSpLDsm30bG4wTEsp0OTBzJZbvIyT4XNJZmW5JdGwyYX3vf5Cs7J7nKi1PKh3vuyPqpNzJM/Y9hcPRJ9IjGMdsIhowt9iFt2tgZTuSOvsOpjSQM83l1GzSPRv+mx5Wn52n3y/5AF/t2XPmeJEiaeQ1DeU2i/O8eUfuGMi/545m+Av1ueO3LblwbiSh12L4gOq8D9IKj7rXiqa4xZhLhHn/3Pf82R7taIDwczbpLpoV9/jgnHXkWtOh/V72Z7UC20//Zu3t6hOnAAyS+ag1uol9hMg+vTC5p7nV1eVU/B91OQkv4FNuIHNMQg8huggaqFMWAgXF/9k9mf19doV467dCfbPLQ08lprflU6LiUlPubIsdmAIVrmDHlO9I7PmBMYggXjL4d6ox8Kjqcqcp8uiIwvpFIAnSpejZ6mvJNftx/qdzMj745sqhreAR8kr2OGrtF23GaCHpj3Hrjq9l9i505PtEhgxEQtEOOIhzzclDJwzVPwZnqfP10UOdtpn/5L+o+E1B2abQpYYGVS7xLGEuA3PqOARLZH9g3xYhpISYrGpmrV0p/pI8LH23TsQt1hy07514eABYQQ5PeANiiBRtzDsmOKMaZXGLmZtuFmK2cGWvW1rxVO4l7nYFGdsayhEvM1QjuvBTqBSH7EehSbQ=
     file: "$TRAVIS_BUILD_DIR/lib/binding/bcrypt_lib.node"
     skip_cleanup: true
   on:
