@@ -15,8 +15,8 @@ before_install:
 deploy:
 
   provider: releases
-    user: "GITHUB USERNAME"
-    password: "GITHUB PASSWORD"
+    user: GITHUB USERNAME
+    password: GITHUB PASSWORD
     file: "$TRAVIS_BUILD_DIR/lib/binding/bcrypt_lib.node"
     skip_cleanup: true
   on:
