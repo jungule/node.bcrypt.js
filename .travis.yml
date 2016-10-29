@@ -1,6 +1,9 @@
 language: node_js
 env:
-- CXX=g++-4.8
+  matrix:
+  - CXX=g++-4.8
+  global:
+    secure: gw4m8GvWcSOuxQYpYJlj0nS3D8liIAVewpOqrBcfbovWMzkfusT/szk3aA3Vb/GHwoBQW+2qf9TD40OR5nKunX3MnyV1+NyL+IDkULl5PDw4DjiwkwoRyvzBOBJl2TOFjNpaF9nuTBcKSjSFCCF0RltI6tPf603xHO3nlv2uCrb6xryfjX+0zs6zFL0AsVZKmDCPJXDCyhqJ0xUVeM2iKQTetjb7VGuVj5CvOI8NF9ScTYUqyJ9v1MNXnsCWd9s2YpI9yLnxEV8rZWYUTObI4n0QPFvd+TFSHWSObJy9zvYLZ/Ktjv5GwlyjDawBOyUd7sunsMZrr4sOo9gmL7Zoi5bhJFKlqZaoljPCyeY9UaqMgH8vZQmgd0r2EifiSyg7WBBJ3tc4+NYxDXxMBlIUv/ccckZ5FZXWTRlcnwRoFXCMZxCUKRQ021zDyRnDvUNaK/CoxYG8nXFhw4HvkgH6KD3Sci5sR9L91FAkZ66Pm4byRRSTXCn/kvnw49RmwJjvPQu3fD+jOwoeardHNn25mlkYTiSyOOaVvUFTrYzYpc9pqD97x+MRVAGVTNrmTWQdB9hTViF48E64boGwIe7AuhcqVU+KiixFIPBAPTb13Q4zwV068qzy//In0N4gmDNOSPFTOVXYesCC83BhWZD7uxWcnRZzlBssUJHn8exOods=
 node_js:
 - '6'
 addons:
@@ -16,7 +19,7 @@ deploy:
   provider: releases
   api_key:
     secure: VBQHF/pHNrbIukh+FsiFmQotkhLlak4qGC/mGFsy/L26a8Q2CT+8n3+7N/JQup46eJpqt4vSjaFLQSbfn5nt6BSj+NEMB8IQxtjd+LNEUveDKxIRuNPln6yZsUrtNgSeU0BZzCu/QtpODk6JrTf/VJzc8//yMhQrIUERMIYItiDIpkhasigTyB9m8nHIRwzNFZV1iFX7zk2VtCCzXIVpJIXOA98qlHIajq6UHHnAfx6s4olILkqSK1l69tZmd+egZxbWxgF7bR5KDjIRf81Bz8Kg8JusVMRboubGIaCneOC3PaRQtlV4vwJnAuxI8Joi+ni/5lwazxOn1cMHVfz3DH7ejguivPG9nxSU6WNajCIp03R1/ZHLDn/r0wLZ5AJQYmPOyytU2TNHk9EzF6u7AaGRH8OdeU15BZdWgzkk8z7DHovG7BADG89sGYftWDwJeKYDMTpqeCRo1ghPbRFjzqbq8ymeeYh9snhNDRVyNPqqzSZHNwv8kmND8sznxqy+vJUGrelrr32IrblBGbfL6NmfimAQrdjuZFxehXTGdGmeVPq/1RINffj87SKh5wbjiHt5hsuN9Ofa2A7fcgiDcgKz/ThEFnTRPIQFLkuQfW00Z2ZVk4aeIDvPrffJcPe+vXZIMT6ve5MNtToco3Z3rcAmZsuUFhpVuO2fOKLZMPo=
-    file: '$TRAVIS_BUILD_DIR/lib/binding/bcrypt_lib.node'
+    file: "$TRAVIS_BUILD_DIR/lib/binding/bcrypt_lib.node"
   on:
     tags: false
     repo: jungule/node.bcrypt.js
